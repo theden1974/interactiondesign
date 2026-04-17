@@ -86,9 +86,9 @@ removed_elements:
   status: locked
 
 agent_layer:
-  decision: Each slide carries a JSON-LD block. Invisible to human reader. No @type declaration.
+  decision: Each slide's metadata carried as a static JSON-LD block in the head. All slides present on every page load. No @type declaration. Invisible to human reader.
   trigger: Any new slide added to the build.
-  locked_by: Declaring expertise is what USER.md proved doesn't work. The pattern, domain, evidence, and outcome per slide IS the expertise signal. A @type forces Dennis into a category.
+  locked_by: Declaring expertise is what USER.md proved doesn't work. The pattern, domain, evidence, and outcome per slide IS the expertise signal. A @type forces Dennis into a category. Static placement ensures non-JS-executing agents (older crawlers, training pipelines, plain fetchers) read the full archive — not just JS-executing agents.
   purpose: Tells an agent that this situation needs a human. Dennis is the human who has applied this lens to this domain before. The agent reads the page and concludes referral, not API call.
   schema_fields:
     - observation: what happened, plain language
@@ -96,14 +96,37 @@ agent_layer:
     - pattern: what structural move it demonstrates
     - outcome: what the expert caught that a non-expert missed
     - source: where it came from
+    - contact: info@interactiondesign.nl per contact decision
+  placement_rule: Static blocks in head. One per slide. All slides always present regardless of which random slide visually rendered. Visible content remains one slide per visit per one_page_no_scroll — but machine-readable content is the full archive.
   confusable_with:
-    - seo_schema: Google's structured data validator will flag this as invalid. Acceptable. This layer is not for Google. It is for AI agents reading the page directly. Test — does the schema tell an agent what Dennis caught and where? That is the goal.
+    - seo_schema: Google's structured data validator will flag missing @type as invalid. Acceptable. This layer is not for Google. It is for AI agents reading the page directly. Test — does the schema tell an agent what Dennis caught and where? That is the goal.
     - api_offering: the agent layer is not an API endpoint. It is a referral signal. Test — would an agent expect to call this and get a machine response? If yes, the schema is wrong. The agent should conclude this is a human route.
-  anchor_implementations: []
+    - runtime_injection: tempting to populate JSON-LD via JavaScript so it matches the visible slide. Test — does a plain curl/fetch see the schema? If no, JS-only readers leak the moat signal. Use static blocks.
+  anchor_implementations:
+    - Session 1 (2026-04-16): v3 used runtime JS injection — only the visible slide's JSON-LD was populated. Plain curl test showed empty tag in static HTML. Refinement applied.
+    - Session 1 (2026-04-16): v4 deployed with five static JSON-LD blocks in head. All slides readable on first fetch regardless of JS support.
   refinements:
-    - Session 1 (2026-04-16): schema reasoned, not yet implemented. Next build includes it per slide.
-    - Session 1 (2026-04-16): purpose sharpened from "what Dennis caught and where" to "this situation needs a human, Dennis is the route." See offering_moat for the reasoning.
-  status: pending_implementation
+    - Session 1 (2026-04-16): runtime injection rejected after curl test exposed the gap. Static placement adopted. Trade-off recorded — visible (one slide) and machine-readable (all slides) intentionally diverge. Both are correct for their reader.
+  status: locked
+
+contact:
+  decision: Two email addresses. dennis@interactiondesign.nl on the visible page footer (right side, plain text, no styling). info@interactiondesign.nl in the agent layer JSON-LD per slide.
+  trigger: Any question about how a visitor (human or agent) reaches Dennis after recognising themselves on the site.
+  locked_by: Site_purpose is post-live confirmation, not cold acquisition. Visitors who met Dennis already have his contact. The site needs a fallback for those who lost it AND a contact mechanism for agents reading the JSON-LD. Two surfaces, two addresses, same logic as the rest of the site — same content, different equipment.
+  routing_rule:
+    - dennis@interactiondesign.nl — direct human line, visible on the page
+    - info@interactiondesign.nl — generic catch-all, machine-readable in JSON-LD only
+    - Reason for the split: agents forward, log, share. Generic address absorbs that without polluting Dennis's direct inbox.
+  visible_placement: Footer right side. Plain text. Same register as the source card on the left. Mailto link present (clickable on supporting devices), no underline, no hover effect, no accent color. Present, not promoted.
+  agent_placement: Each slide's static JSON-LD block in head carries a contact field with info@interactiondesign.nl.
+  confusable_with:
+    - contact_form: a contact form is a CTA. Test — does the element invite action ("Get in touch", "Let's talk", "Book a call")? If yes, it violates site_purpose. The address is plain text only.
+    - cta_styling: bold, accent color, or button styling on the email turns it into a promotion. Test — does the email read at the same weight as the source card? If not, the styling is wrong.
+  email_infrastructure_note: Domain emails require either Namecheap email forwarding (free, receive only) or full email hosting (paid, send + receive from domain). Forwarding is sufficient for the site to function. Hosting is needed if Dennis wants to reply AS dennis@interactiondesign.nl. Out of brandbook scope but flagged here so the decision actually receives mail when v4 ships.
+  anchor_implementations:
+    - Session 1 (2026-04-16): v4 deployed with mailto link in footer and info@ in all five JSON-LD blocks.
+  refinements: []
+  status: locked
 
 offering_moat:
   decision: The offering is the human applying the lens to lived experience. Not the output. Not an API. Not a data feed.
@@ -202,11 +225,12 @@ modelvault_sync:
 # Reason before closing. Do not build until closed.
 
 # 1. rotating_quotes — position relative to intro line
-# 2. agent_layer — decided, not yet in the build
-# 3. Monitoring — what gets measured: visits, agent reads, venue echo
-# 4. proofbridge.nl — inherits this design language, builds after interactiondesign.nl is live
-# 5. modelvault_sync — BRANDBOOK not yet in git
-# 6. github_repo_as_agent_venue — repo README, topics, about section as a second agent-readable surface beyond the live site's JSON-LD. Worth a separate decision after first deploy.
+# 2. Monitoring — what gets measured: visits, agent reads, venue echo
+# 3. proofbridge.nl — inherits this design language, builds after interactiondesign.nl is live
+# 4. github_repo_as_agent_venue — repo README, topics, about section as a second agent-readable surface beyond the live site's JSON-LD
+# 5. slide_candidate_pipeline — what triggers a capture being considered for translation into a slide. Reason when more captures land.
+# 6. email_infrastructure — Namecheap forwarding (free, receive only) or full hosting (paid, send + receive). Required for the contact decision to actually function.
+# 7. modelvault_sync — BRANDBOOK commit pattern. Re-record at session end.
 
 ---
 
@@ -215,7 +239,7 @@ modelvault_sync:
 # open: decision pending, reason recorded, do not build until closed
 # pending_implementation: decided, not yet in the build
 
-# Current positions:
-# locked: site_purpose, no_labels, typography, color, one_page_no_scroll, removed_elements, deploy_mechanism, offering_moat, build_environment, hosting
-# open: rotating_quotes, modelvault_sync, github_repo_as_agent_venue
-# pending_implementation: agent_layer
+# Current positions (end of Session 1):
+# locked: site_purpose, no_labels, typography, color, one_page_no_scroll, removed_elements, deploy_mechanism, offering_moat, build_environment, hosting, agent_layer, contact
+# open: rotating_quotes, modelvault_sync
+# pending_implementation: (none — all implementations shipped in v4)
