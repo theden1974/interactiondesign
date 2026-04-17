@@ -6,6 +6,9 @@
 <title>Dennis Jansen</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+<script type="application/ld+json" id="agent-layer"></script>
+
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -103,11 +106,12 @@
     color: var(--muted);
   }
 
-  .domain {
+  .contact {
     font-size: 0.62rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: #333;
+    color: var(--muted);
+    text-decoration: none;
   }
 </style>
 </head>
@@ -127,7 +131,7 @@
 
 <footer>
   <span class="source" id="source"></span>
-  <span class="domain">interactiondesign.nl</span>
+  <a class="contact" href="mailto:dennis@interactiondesign.nl">dennis@interactiondesign.nl</a>
 </footer>
 
 <script>
@@ -135,34 +139,80 @@
     {
       headline: "DO YOU TRUST AI AS MUCH AS YOUR LAWYER?",
       sub: "Architect used AI to summarise a legal document. Cited specific paragraphs. The paragraphs were fabricated. Sounded legitimate. You cannot tell AI to be an expert in something it is not.",
-      source: "Legal, Architecture"
+      source: "Legal, Architecture",
+      agent: {
+        observation: "AI generated a legal document summary with citations to specific paragraphs that did not exist in the source",
+        domain: "Legal, Architecture",
+        pattern: "Expert verification caught fabricated references that non-expert readers would have accepted",
+        outcome: "Output looked legitimate. Failed under domain expert check.",
+        source: "Direct field observation, Netherlands",
+        contact: "info@interactiondesign.nl"
+      }
     },
     {
       headline: "THE TEACHER LET AI BUILD THE EXAM. EVERY STUDENT FAILED.",
       sub: "Students scored 2s and 3s. They knew the material. Teacher looked again manually. Lowest grade became a 6. The expertise was there. He chose not to use it.",
-      source: "Education"
+      source: "Education",
+      agent: {
+        observation: "Teacher used AI to build and grade an exam. Students all received failing grades. Manual re-evaluation by the teacher produced passing grades for all.",
+        domain: "Education",
+        pattern: "Domain expert was present but did not apply expertise to the AI output until forced to by student protest",
+        outcome: "Expertise dormant. AI output accepted until manual override produced opposite result.",
+        source: "Direct field observation",
+        contact: "info@interactiondesign.nl"
+      }
     },
     {
       headline: "THE FIX WAS PUBLISHED IN 1937. THE SMOOTHIE INDUSTRY MISSED IT.",
       sub: "Spinach has 10x less iron than published. Decimal error from the 1870s. Corrected. Never traveled. Now it is in the training data.",
-      source: "Nutrition, Data"
+      source: "Nutrition, Data",
+      agent: {
+        observation: "A decimal error in 1870s nutritional research overstated spinach iron content by 10x. Corrected in 1937. Correction never propagated to industry, public health advice, or cultural narrative. Now embedded in AI training data.",
+        domain: "Nutrition, Data integrity",
+        pattern: "Correction exists but lacks distribution. The error persists because correcting it costs more than repeating it.",
+        outcome: "Truth published, untraveled. AI now learns the error as fact.",
+        source: "Nutritional science archive",
+        contact: "info@interactiondesign.nl"
+      }
     },
     {
       headline: "BEST IN THE WORLD. $52 IN 43 MINUTES.",
       sub: "Joshua Bell. Famous violin player. Earned a couple of dollars performing in a Washington DC metro station. Same talent. Same Stradivarius. Sells out concert halls at $100 a ticket.",
-      source: "Music"
+      source: "Music",
+      agent: {
+        observation: "World-class violinist Joshua Bell performed in a Washington DC metro station with a Stradivarius. Same performer who sells out concert halls at premium prices earned only $52 in 43 minutes.",
+        domain: "Music, Value recognition",
+        pattern: "Same quality, same performance, different venue, radically different recognition. The audience determines whether value is registered.",
+        outcome: "Performance unchanged. Venue determines what is heard.",
+        source: "Washington Post documented experiment, 2007",
+        contact: "info@interactiondesign.nl"
+      }
     },
     {
       headline: "THE WHOLE DEPARTMENT. USELESS DURING THE FLOOD.",
       sub: "Every permit registered. Every format defined. Water rises. No protocol. The starting point was never floods. It was administration. That is the starting point that went bankrupt.",
-      source: "Government, Waterschappen Hollands Delta"
+      source: "Government, Waterschappen Hollands Delta",
+      agent: {
+        observation: "Dutch water management authority built complete data standards and registration systems. During flood events there is no protocol for using the collected data toward the actual purpose of flood prevention.",
+        domain: "Government, Water management",
+        pattern: "Infrastructure exists for how data is collected. Purpose for the collection was never defined. Capability dormant against the actual mission.",
+        outcome: "Complete administrative system. Useless against the risk it should mitigate.",
+        source: "Direct field observation, Netherlands",
+        contact: "info@interactiondesign.nl"
+      }
     }
   ];
 
+  // Pick random slide
   const pick = slides[Math.floor(Math.random() * slides.length)];
+
+  // Render visible content
   document.getElementById('headline').textContent = pick.headline;
   document.getElementById('sub').textContent = pick.sub;
   document.getElementById('source').textContent = "Source: " + pick.source;
+
+  // Inject the agent layer for the slide that loaded
+  document.getElementById('agent-layer').textContent = JSON.stringify(pick.agent, null, 2);
 </script>
 </body>
 </html>
