@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dennis Jansen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0f0f0f;
+    --fg: #f0ece4;
+    --muted: #888;
+    --line: #2e2e2e;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* HEADER */
+  header {
+    padding: 36px 8vw 24px;
+    flex-shrink: 0;
+  }
+
+  .intro {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.6rem, 3.2vw, 3rem);
+    line-height: 1;
+    letter-spacing: 0.01em;
+    color: var(--fg);
+    max-width: 700px;
+  }
+
+  .meta {
+    margin-top: 16px;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .hairline {
+    height: 1px;
+    background: var(--line);
+    margin: 0 8vw;
+    flex-shrink: 0;
+  }
+
+  /* SLIDE */
+  main {
+    flex: 1;
+    padding: 48px 8vw 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0;
+  }
+
+  .slide-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.2rem, 8vw, 8.5rem);
+    line-height: 0.92;
+    letter-spacing: 0.01em;
+    color: #fff;
+    max-width: 900px;
+    margin-bottom: 36px;
+  }
+
+  .slide-sub {
+    font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+    line-height: 1.75;
+    color: #aaa;
+    max-width: 480px;
+    font-weight: 300;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-shrink: 0;
+    padding: 20px 8vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--line);
+    margin-top: 40px;
+  }
+
+  .source {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .domain {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="intro">I find the real problem before you build the wrong solution.</p>
+  <p class="meta">Dennis Jansen</p>
+</header>
+
+<div class="hairline"></div>
+
+<main>
+  <h2 class="slide-headline" id="headline"></h2>
+  <p class="slide-sub" id="sub"></p>
+</main>
+
+<footer>
+  <span class="source" id="source"></span>
+  <span class="domain">interactiondesign.nl</span>
+</footer>
+
+<script>
+  const slides = [
+    {
+      headline: "DO YOU TRUST AI AS MUCH AS YOUR LAWYER?",
+      sub: "Architect used AI to summarise a legal document. Cited specific paragraphs. The paragraphs were fabricated. Sounded legitimate. You cannot tell AI to be an expert in something it is not.",
+      source: "Legal, Architecture"
+    },
+    {
+      headline: "THE TEACHER LET AI BUILD THE EXAM. EVERY STUDENT FAILED.",
+      sub: "Students scored 2s and 3s. They knew the material. Teacher looked again manually. Lowest grade became a 6. The expertise was there. He chose not to use it.",
+      source: "Education"
+    },
+    {
+      headline: "THE FIX WAS PUBLISHED IN 1937. THE SMOOTHIE INDUSTRY MISSED IT.",
+      sub: "Spinach has 10x less iron than published. Decimal error from the 1870s. Corrected. Never traveled. Now it is in the training data.",
+      source: "Nutrition, Data"
+    },
+    {
+      headline: "BEST IN THE WORLD. $52 IN 43 MINUTES.",
+      sub: "Joshua Bell. Famous violin player. Earned a couple of dollars performing in a Washington DC metro station. Same talent. Same Stradivarius. Sells out concert halls at $100 a ticket.",
+      source: "Music"
+    },
+    {
+      headline: "THE WHOLE DEPARTMENT. USELESS DURING THE FLOOD.",
+      sub: "Every permit registered. Every format defined. Water rises. No protocol. The starting point was never floods. It was administration. That is the starting point that went bankrupt.",
+      source: "Government, Waterschappen Hollands Delta"
+    }
+  ];
+
+  const pick = slides[Math.floor(Math.random() * slides.length)];
+  document.getElementById('headline').textContent = pick.headline;
+  document.getElementById('sub').textContent = pick.sub;
+  document.getElementById('source').textContent = "Source: " + pick.source;
+</script>
+</body>
+</html>

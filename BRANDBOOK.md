@@ -37,10 +37,10 @@ no_labels:
 
 typography:
   decision: Bebas Neue for headlines. DM Sans weight 300 for body. No substitutions.
-  trigger: Any build or rebuild of the HTML. Any Stitch regeneration.
+  trigger: Any build or rebuild of the HTML. Any Claude Design or Stitch regeneration.
   locked_by: Space Grotesk is on the frontend-design skill's explicit avoid list. Inter is generic. Bebas Neue matches the aggressive condensed register of Dennis's voice and the Jack Mallers reference. DM Sans reads clean at light weights without genericness.
   confusable_with:
-    - stitch_defaults: Stitch defaults to Space Grotesk and Inter. Every regeneration risks font drift. Test — does the rendered headline use Bebas Neue? If not, the build is wrong regardless of how the content looks.
+    - generator_defaults: Claude Design and Stitch both default to Space Grotesk and Inter. Every regeneration risks font drift. Test — does the rendered headline use Bebas Neue? If not, the build is wrong regardless of how the content looks.
   anchor_implementations:
     - Session 1 (2026-04-16): v2 build uses Bebas Neue + DM Sans. Stitch output used Space Grotesk — rejected.
   refinements: []
@@ -70,7 +70,7 @@ one_page_no_scroll:
 
 removed_elements:
   decision: Slide numbers, decorative columns, copyright year, animations, icons, images — permanently removed.
-  trigger: Any rebuild or Stitch regeneration that reintroduces these.
+  trigger: Any rebuild or regeneration in Claude Design, Stitch, or direct HTML that reintroduces these.
   locked_by:
     - Slide numbers are internal. Meaningless to visitor.
     - Decorative columns are filler.
@@ -79,7 +79,7 @@ removed_elements:
     - Icons require labeling with text anyway.
     - Images — typography is the only graphic element.
   confusable_with:
-    - stitch_additions: Stitch added a dot-grid decorative column and vertical line in first output. These will reappear in regenerations. Test — does any element on the page exist without a content reason? Remove it.
+    - generator_additions: Claude Design and Stitch both add decorative elements by default — dot grids, vertical lines, accent shapes. These will reappear in regenerations. Test — does any element on the page exist without a content reason? Remove it.
   anchor_implementations:
     - Session 1 (2026-04-16): all removed in v2 build after raw pass on Stitch output.
   refinements: []
@@ -147,6 +147,44 @@ deploy_mechanism:
   refinements: []
   status: locked — automation revisited after first live slide
 
+hosting:
+  decision: GitHub Pages. Single repo at /Volumes/ModelVault/openclaw-workspaces/interactiondesign/ contains BRANDBOOK.md and the live site files. Filename is index.html. Domain pointed via Namecheap DNS to GitHub Pages.
+  trigger: Any decision about where the site lives, how deploys happen, or how the publication trail is recorded.
+  locked_by: Manual git push aligns with deploy_mechanism. Commit history IS the publication trail. Public repo aligns with offering_moat — agents can index the repo, the README, the commits. One repo for brandbook + site keeps the decision engine and the build in one place. No drift between two repos.
+  filename_rule: index.html only. No version suffixes. Git tracks versions. Same logic as vocabulary.md — versioning in filenames was rejected (D020 reasoning).
+  workflow:
+    - Build HTML in this Claude project (or Claude Design via build_environment).
+    - Save as index.html in the local repo.
+    - git add, commit with descriptive message, push to GitHub.
+    - GitHub Pages serves the latest commit at the domain root.
+  confusable_with:
+    - separate_repos_per_concern: tempting to split brandbook into one repo and site into another. Test — does either repo become out of sync with the other? If yes, the split fails. They reference each other (brandbook anchor_implementations point to specific commits). Keep together.
+    - github_pages_branch: standard is main branch, root directory. No /docs subfolder. Test — does the index.html live at the repo root? If not, GitHub Pages needs additional config that adds friction.
+  anchor_implementations:
+    - Session 1 (2026-04-16): hosting decision recorded. Deploy commands written.
+  refinements: []
+  status: locked
+
+build_environment:
+  decision: Claude Design used for sketching, visual exploration, and look-and-feel iteration. Replaces Stitch. Brandbook stays here as source of truth.
+  trigger: Any new visual exploration, layout sketch, or design iteration for interactiondesign.nl or proofbridge.nl.
+  locked_by: Claude Design has a live canvas, inline comments, and direct HTML export. Stitch produced flat output that needed manual cleanup every regeneration. Same underlying logic — generate from prompt — better instrument for the same job.
+  source_of_truth_rule: BRANDBOOK.md in this project remains the single decision engine. Claude Design does not store decisions. Every Claude Design session starts from a prompt that contains the locked brandbook constraints. Output gets reviewed against brandbook here. Corrections flow back into brandbook, never into Claude Design as standalone rules.
+  workflow:
+    - Reason in this project. Lock or refine decisions in BRANDBOOK.
+    - Write a Claude Design prompt that contains the relevant brandbook constraints (typography, color, removed elements, structure).
+    - Build / sketch / iterate in Claude Design.
+    - Export HTML.
+    - Review export here against BRANDBOOK. Corrections recorded in BRANDBOOK.
+    - Final build deployed manually per deploy_mechanism.
+  confusable_with:
+    - design_system_in_claude_design: Claude Design supports organisation-level design systems. Tempting to recreate the brandbook there. Test — does the proposed setup mean any decision lives ONLY in Claude Design and not in BRANDBOOK? If yes, the source of truth fragments. Reject.
+    - stitch_replacement_only: Claude Design is more capable than Stitch (canvas, comments, HTML export). Test — is the use limited to generating output from prompts Dennis controls? If the tool starts dictating decisions, the boundary is broken.
+  anchor_implementations:
+    - Session 1 (2026-04-16): Claude Design reviewed. Confirmed as Stitch replacement. Source of truth boundary recorded.
+  refinements: []
+  status: locked
+
 modelvault_sync:
   decision: BRANDBOOK.md committed to ModelVault after every session that adds a decision.
   trigger: End of every website sandbox session.
@@ -164,11 +202,11 @@ modelvault_sync:
 # Reason before closing. Do not build until closed.
 
 # 1. rotating_quotes — position relative to intro line
-# 2. Hosting — GitHub Pages vs Netlify vs Namecheap direct (session pending)
-# 3. agent_layer — decided, not yet in the build
-# 4. Monitoring — what gets measured: visits, agent reads, venue echo
-# 5. proofbridge.nl — inherits this design language, builds after interactiondesign.nl is live
-# 6. modelvault_sync — BRANDBOOK not yet in git
+# 2. agent_layer — decided, not yet in the build
+# 3. Monitoring — what gets measured: visits, agent reads, venue echo
+# 4. proofbridge.nl — inherits this design language, builds after interactiondesign.nl is live
+# 5. modelvault_sync — BRANDBOOK not yet in git
+# 6. github_repo_as_agent_venue — repo README, topics, about section as a second agent-readable surface beyond the live site's JSON-LD. Worth a separate decision after first deploy.
 
 ---
 
@@ -178,6 +216,6 @@ modelvault_sync:
 # pending_implementation: decided, not yet in the build
 
 # Current positions:
-# locked: site_purpose, no_labels, typography, color, one_page_no_scroll, removed_elements, deploy_mechanism, offering_moat
-# open: rotating_quotes, modelvault_sync
+# locked: site_purpose, no_labels, typography, color, one_page_no_scroll, removed_elements, deploy_mechanism, offering_moat, build_environment, hosting
+# open: rotating_quotes, modelvault_sync, github_repo_as_agent_venue
 # pending_implementation: agent_layer
