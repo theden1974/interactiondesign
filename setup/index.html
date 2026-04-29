@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Sovereign Reasoning System</title>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100%; height: 100%;
+    background: #0a0a0a;
+    overflow: hidden;
+    font-family: "JetBrains Mono", "IBM Plex Mono", "SF Mono", Menlo, Consolas, ui-monospace, monospace;
+    color: #e8e8e8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body { display: flex; align-items: center; justify-content: center; }
+  svg {
+    width: 100vw; height: 100vh;
+    display: block;
+  }
+
+  text { font-family: inherit; }
+
+  .meta            { font-size: 11px; fill: #5d5d5d; letter-spacing: 0.18em; }
+  .meta-light      { font-size: 11px; fill: #8a8a8a; letter-spacing: 0.18em; }
+  .meta-strong     { font-size: 12px; fill: #c8c8c8; letter-spacing: 0.20em; font-weight: 600; }
+
+  .title           { font-size: 26px; fill: #f5f5f5; letter-spacing: 0.04em; font-weight: 600; }
+  .title-md        { font-size: 18px; fill: #f0f0f0; letter-spacing: 0.04em; font-weight: 600; }
+  .title-sm        { font-size: 14px; fill: #f0f0f0; letter-spacing: 0.04em; font-weight: 600; }
+
+  .body            { font-size: 12px;   fill: #b8b8b8; }
+  .body-strong     { font-size: 12px;   fill: #d8d8d8; }
+  .body-dim        { font-size: 11px;   fill: #888;    }
+
+  .frame           { fill: none; stroke: #2a2a2a; stroke-width: 1; }
+  .frame-strong    { fill: none; stroke: #4a4a4a; stroke-width: 1.25; }
+  .divider         { stroke: #1f1f1f; stroke-width: 1; }
+  .divider-soft    { stroke: #161616; stroke-width: 1; }
+
+  .arrow-thin         { fill: none; stroke: #4a4a4a; stroke-width: 1; }
+  .arrow-thin-dotted  { fill: none; stroke: #6a6a6a; stroke-width: 1.25; stroke-dasharray: 2 5; }
+  .arrow-spec         { fill: none; stroke: #f0f0f0; stroke-width: 6; }
+  .arrow-back         { fill: none; stroke: #6a6a6a; stroke-width: 1.25; stroke-dasharray: 6 3; }
+
+  .state-line      { font-size: 10px; fill: #999; letter-spacing: 0.12em; font-style: italic; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <marker id="arr"      markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#6a6a6a"/>
+    </marker>
+    <marker id="arr-back" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7a7a7a"/>
+    </marker>
+    <marker id="arr-spec" markerWidth="14" markerHeight="14" refX="6" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,14 L12,7 z" fill="#f0f0f0"/>
+    </marker>
+  </defs>
+
+  <!-- ================== TOP HEADER ================== -->
+  <text x="110"  y="34" class="meta-strong">SOVEREIGN REASONING SYSTEM</text>
+  <text x="1540" y="34" class="meta" text-anchor="end">LOCAL HARDWARE  ·  NO CLOUD  ·  GIT-TRACKED</text>
+  <line x1="110" y1="50" x2="1540" y2="50" class="divider"/>
+
+  <!-- ================== LAYER 01 — SOVEREIGN TREE ================== -->
+  <g id="layer-01">
+    <rect x="110" y="70" width="1060" height="180" class="frame"/>
+    <text x="124"  y="90" class="meta">LAYER 01</text>
+    <text x="1156" y="90" class="meta" text-anchor="end">SOURCE OF TRUTH</text>
+
+    <text x="124" y="124" class="title">SOVEREIGN TREE</text>
+    <text x="124" y="148" class="body">Mac Mini  +  ModelVault SSD  ·  local hardware  ·  Markdown files  ·  git-tracked</text>
+
+    <line x1="124" y1="166" x2="1156" y2="166" class="divider"/>
+
+    <text x="124" y="192" class="meta-light">CONTAINS</text>
+    <text x="124" y="214" class="body-strong">MANIFESTO    ·    decisions    ·    captures    ·    session records    ·    vocabulary    ·    reasoning profiles</text>
+
+    <text x="124" y="240" class="meta-strong">NOT IN THE CLOUD     ·     NOTHING ANYWHERE ELSE</text>
+  </g>
+
+  <!-- Layer transition label -->
+  <text x="110"  y="276" class="meta">LAYER 02 — THREE SPECIALISED REASONING INSTRUMENTS · SEPARATE CLAUDE PROJECTS</text>
+  <text x="1156" y="276" class="meta" text-anchor="end">→ READ SPECIFIC FILES AT SESSION START</text>
+
+  <!-- Reading arrows: Sovereign Tree → Three projects (dotted) -->
+  <g>
+    <path d="M 280  250 L 280  298" class="arrow-thin-dotted" marker-end="url(#arr)"/>
+    <path d="M 640  250 L 640  298" class="arrow-thin-dotted" marker-end="url(#arr)"/>
+    <path d="M 1000 250 L 1000 298" class="arrow-thin-dotted" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- ================== LAYER 02 — THREE INSTRUMENTS ================== -->
+
+  <!-- BRAIN CAPTURE — CATCHES -->
+  <g id="brain-capture">
+    <rect x="110" y="300" width="340" height="320" class="frame"/>
+    <text x="124" y="320" class="meta">INSTRUMENT 01</text>
+    <text x="436" y="320" class="meta-light" text-anchor="end">CATCHES</text>
+
+    <text x="124" y="354" class="title-md">BRAIN CAPTURE</text>
+    <line x1="124" y1="368" x2="436" y2="368" class="divider"/>
+
+    <text x="124" y="392" class="meta-light">RECORDS WHAT IS HEARD</text>
+    <text x="124" y="416" class="body">conversations</text>
+    <text x="124" y="434" class="body">podcasts</text>
+    <text x="124" y="452" class="body">articles</text>
+    <text x="124" y="470" class="body">own reasoning</text>
+
+    <text x="124" y="510" class="meta-light">OUTPUT</text>
+    <text x="124" y="534" class="body-strong">raw transcriptions</text>
+    <text x="124" y="552" class="body-strong">+ paired verification artifacts</text>
+
+    <text x="124" y="600" class="meta">FN.   RECORD RAW   →   ANNOTATE   →   PRESERVE</text>
+  </g>
+
+  <!-- SANDBOX — REASONS -->
+  <g id="sandbox">
+    <rect x="470" y="300" width="340" height="320" class="frame"/>
+    <text x="484" y="320" class="meta">INSTRUMENT 02</text>
+    <text x="796" y="320" class="meta-light" text-anchor="end">REASONS</text>
+
+    <text x="484" y="354" class="title-md">SANDBOX</text>
+    <line x1="484" y1="368" x2="796" y2="368" class="divider"/>
+
+    <text x="484" y="392" class="meta-light">REASONS OVER THE SYSTEM</text>
+    <text x="484" y="416" class="body">improvements</text>
+    <text x="484" y="434" class="body">architecture</text>
+    <text x="484" y="452" class="body">candidate decisions</text>
+    <text x="484" y="470" class="body">audits</text>
+
+    <text x="484" y="510" class="meta-light">OUTPUT</text>
+    <text x="484" y="534" class="body-strong">specs in natural language</text>
+    <text x="484" y="552" class="body-dim">— no code —</text>
+
+    <text x="484" y="600" class="meta">FN.   AUDIT SYSTEM   →   REASON   →   SPECIFY</text>
+  </g>
+
+  <!-- WEBSITE SANDBOX — TRANSLATES -->
+  <g id="website-sandbox">
+    <rect x="830" y="300" width="340" height="320" class="frame"/>
+    <text x="844"  y="320" class="meta">INSTRUMENT 03</text>
+    <text x="1156" y="320" class="meta-light" text-anchor="end">TRANSLATES</text>
+
+    <text x="844" y="354" class="title-md">WEBSITE SANDBOX</text>
+    <line x1="844" y1="368" x2="1156" y2="368" class="divider"/>
+
+    <text x="844" y="392" class="meta-light">PRODUCES VENUE MATERIAL</text>
+    <text x="844" y="416" class="body">slides       →   interactiondesign.nl</text>
+    <text x="844" y="434" class="body">cases        →   proofbridge.nl</text>
+
+    <text x="844" y="474" class="meta-light">METHOD</text>
+    <text x="844" y="498" class="body-strong">extracted from raw source</text>
+    <text x="844" y="516" class="body-dim">— never composed —</text>
+
+    <text x="844" y="558" class="state-line">STATE: corpus-bouw  ·  first case in production</text>
+
+    <text x="844" y="600" class="meta">FN.   EXTRACT FROM RAW   →   VOICE-TEST   →   VENUE</text>
+  </g>
+
+  <!-- ================== SPEC FUNNEL (massive arrow) ================== -->
+  <g id="spec-arrows">
+    <!-- thin converging stubs from each instrument bottom -->
+    <path d="M 280  620 L 280  642" class="arrow-thin"/>
+    <path d="M 640  620 L 640  642" class="arrow-thin"/>
+    <path d="M 1000 620 L 1000 642" class="arrow-thin"/>
+    <!-- horizontal merge -->
+    <path d="M 280 642 L 1000 642" class="arrow-thin"/>
+    <!-- junction node -->
+    <circle cx="640" cy="642" r="3.5" fill="#8a8a8a"/>
+    <!-- one massive spec arrow -->
+    <path d="M 640 642 L 640 678" class="arrow-spec" marker-end="url(#arr-spec)"/>
+    <!-- spec label -->
+    <text x="666" y="668" class="title-sm" fill="#f0f0f0" letter-spacing="0.18em">SPEC</text>
+  </g>
+
+  <!-- ================== LAYER 03 — CLAUDE CODE ================== -->
+  <g id="claude-code">
+    <rect x="110" y="680" width="1060" height="170" class="frame-strong"/>
+    <text x="124"  y="700" class="meta">LAYER 03</text>
+    <text x="1156" y="700" class="meta" text-anchor="end">EXECUTION</text>
+
+    <text x="124" y="734" class="title">CLAUDE CODE</text>
+    <text x="124" y="758" class="body">Terminal environment</text>
+
+    <line x1="124" y1="774" x2="1156" y2="774" class="divider"/>
+
+    <text x="124" y="800" class="body-strong">Executes the specs the three projects produce.</text>
+    <text x="124" y="820" class="body-strong">Verifies against the actual filesystem state.</text>
+    <text x="124" y="840" class="body-strong">Commits to the sovereign tree.</text>
+  </g>
+
+  <!-- ================== BACK ARROW: COMMITS LAND SOVEREIGN ================== -->
+  <g id="back-arrow">
+    <path d="M 110 765 L 60 765 L 60 160 L 105 160" class="arrow-back" marker-end="url(#arr-back)"/>
+    <text x="44" y="465" class="meta-strong" transform="rotate(-90 44 465)">COMMITS LAND SOVEREIGN   →</text>
+  </g>
+
+  <!-- ================== APART — SOVEREIGN PIPELINES ================== -->
+  <g id="pipelines">
+    <rect x="1220" y="70" width="320" height="780" class="frame"/>
+
+    <text x="1234" y="90" class="meta">APART</text>
+    <text x="1526" y="90" class="meta-light" text-anchor="end">CONTINUOUSLY RUNNING</text>
+
+    <text x="1234" y="124" class="title-md">SOVEREIGN</text>
+    <text x="1234" y="148" class="title-md">PIPELINES</text>
+
+    <line x1="1234" y1="168" x2="1526" y2="168" class="divider"/>
+
+    <!-- DIGEST -->
+    <text x="1234" y="196" class="meta">01</text>
+    <text x="1234" y="226" class="title-sm">DIGEST</text>
+    <text x="1234" y="252" class="body">RSS feeds</text>
+    <text x="1234" y="270" class="body">→  local LM</text>
+    <text x="1234" y="288" class="body">→  filter</text>
+    <text x="1234" y="306" class="body">→  Telegram</text>
+
+    <line x1="1234" y1="332" x2="1526" y2="332" class="divider-soft"/>
+
+    <!-- TRANSCRIBE -->
+    <text x="1234" y="360" class="meta">02</text>
+    <text x="1234" y="390" class="title-sm">TRANSCRIBE</text>
+    <text x="1234" y="416" class="body">yt-dlp</text>
+    <text x="1234" y="434" class="body">→  whisper.cpp + Metal</text>
+    <text x="1234" y="452" class="body">→  Telegram</text>
+
+    <line x1="1234" y1="478" x2="1526" y2="478" class="divider-soft"/>
+
+    <!-- VERIFY -->
+    <text x="1234" y="506" class="meta">03</text>
+    <text x="1234" y="536" class="title-sm">VERIFY</text>
+    <text x="1234" y="562" class="body">capture-tests</text>
+    <text x="1234" y="580" class="body">structural invariants</text>
+    <text x="1234" y="598" class="body">maintenance checks</text>
+
+    <line x1="1234" y1="624" x2="1526" y2="624" class="divider"/>
+
+    <!-- Function -->
+    <text x="1234" y="652" class="meta-light">FUNCTION</text>
+    <text x="1234" y="676" class="body-strong">Pre-filter for the ears layer.</text>
+    <text x="1234" y="696" class="body-strong">Auditing-by-use,</text>
+    <text x="1234" y="714" class="body-strong">measured over time.</text>
+
+    <line x1="1234" y1="740" x2="1526" y2="740" class="divider-soft"/>
+
+    <!-- Feeds -->
+    <text x="1234" y="768" class="meta">FEEDS</text>
+    <text x="1234" y="788" class="body-strong">→  BRAIN CAPTURE  (digest, transcribe)</text>
+    <text x="1234" y="806" class="body-strong">→  SANDBOX  (verify-results, alerts)</text>
+    <text x="1234" y="824" class="body-strong">→  CLAUDE CODE  (post-commit hooks)</text>
+  </g>
+
+  <!-- ================== FOOTER — DISCIPLINE FRAME ================== -->
+  <line x1="110" y1="900" x2="1540" y2="900" class="divider"/>
+  <text x="110"  y="934" class="meta">DISCIPLINE FRAME</text>
+  <text x="825"  y="930" class="meta-strong" text-anchor="middle" letter-spacing="0.28em">RAW FIRST    ·    DON'T TRUST VERIFY    ·    CORRECTIONS PROPAGATE</text>
+  <text x="825"  y="952" class="meta-strong" text-anchor="middle" letter-spacing="0.28em">SOVEREIGNTY OPERATIONAL    ·    VOICE SIGNATURE EMBEDDED    ·    AUDIT THROUGH USE</text>
+  <text x="1540" y="934" class="meta" text-anchor="end">FRAME 01</text>
+
+  <!-- subtle filesystem signature -->
+  <text x="110" y="982" class="body-dim">Last updated 2026-04-29   ·   sovereign HEAD bb39b75   ·   /manifesto · /decisions · /captures · /sessions · /vocabulary · /profiles</text>
+</svg>
+</body>
+</html>
