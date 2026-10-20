@@ -28,8 +28,6 @@ Price: tier 1 from {fmt(T1['minimum_sats'])} sats, tier 2 from {fmt(T2['minimum_
 ## Contact
 - {K['request']['to']}
 
-## Optional
-- [AI meetup live playback](https://interactiondesign.nl/AIpresentation/)
 """
 open(os.path.join(OUT, 'llms.txt'), 'w', encoding='utf-8').write(txt)
 print(txt)

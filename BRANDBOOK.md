@@ -171,7 +171,7 @@ deploy_mechanism:
   status: locked — automation revisited after first live slide
 
 hosting:
-  decision: GitHub Pages. Single repo at /Volumes/ModelVault/openclaw-workspaces/interactiondesign/ contains BRANDBOOK.md and the live site files. Filename is index.html. Domain pointed via Namecheap DNS to GitHub Pages.
+  decision: GitHub Pages. Single repo at <local workspace>/ contains BRANDBOOK.md and the live site files. Filename is index.html. Domain pointed via Namecheap DNS to GitHub Pages.
   trigger: Any decision about where the site lives, how deploys happen, or how the publication trail is recorded.
   locked_by: Manual git push aligns with deploy_mechanism. Commit history IS the publication trail. Public repo aligns with offering_moat — agents can index the repo, the README, the commits. One repo for brandbook + site keeps the decision engine and the build in one place. No drift between two repos.
   filename_rule: index.html only. No version suffixes. Git tracks versions. Same logic as vocabulary.md — versioning in filenames was rejected (D020 reasoning).
@@ -212,7 +212,7 @@ modelvault_sync:
   decision: BRANDBOOK.md committed to ModelVault after every session that adds a decision.
   trigger: End of every website sandbox session.
   locked_by: Chat disappears. If BRANDBOOK is not in git, it does not exist outside this project.
-  suggested_path: /Volumes/ModelVault/openclaw-workspaces/interactiondesign/BRANDBOOK.md
+  suggested_path: <local workspace>/BRANDBOOK.md
   confusable_with:
     - project_file_upload: uploading to this Claude project is not the same as committing to ModelVault. Test — is BRANDBOOK.md in git? If not, decisions are at risk.
   anchor_implementations: []
@@ -307,3 +307,8 @@ contact_v2:
   trigger: His line 2026-10-20 17:33, answering "dennis@ or info@ on both sites?": "info".
   why: The same fact on every surface and on proofbridge.nl; agents and search engines trust consistent entity facts.
   applied: index.html (footer + JSON-LD), setup/index.html, index.md, llms.txt, AIpresentation/index.html (contact link only; talk text untouched).
+
+
+## 2026-10-20 23:07 Lisbon — hygiene
+- The April contact rule above (dennis@ visible, info@ machine) is superseded by contact_v2: info@ everywhere. The old lines stay as history.
+- Local disk paths replaced by <local workspace>.

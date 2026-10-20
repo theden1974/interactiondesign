@@ -1,20 +1,5 @@
 # interactiondesign.nl · people and AI agents are welcome to read everything here.
-# The offer is on https://proofbridge.nl/; /llms.txt summarises it for agents.
-
-# Search, answer engines and agents acting for a person
-User-agent: OAI-SearchBot
-User-agent: ChatGPT-User
-User-agent: Claude-SearchBot
-User-agent: Claude-User
-User-agent: PerplexityBot
-User-agent: Perplexity-User
-Allow: /
-
-# Training crawlers
-User-agent: GPTBot
-User-agent: ClaudeBot
-User-agent: Google-Extended
-Allow: /
+# The offer is on https://proofbridge.nl/agents/; /llms.txt summarises it for agents.
 
 User-agent: *
 Allow: /
