@@ -1,31 +1,24 @@
-# Dennis Jansen · interactiondesign.nl
+# interactiondesign.nl · Dennis Jansen
 
-> I find the real problem before you build the wrong solution.
+> Dennis Jansen, UX researcher and service designer. This site holds his field observations and how he works. Paid requests go through proofbridge.nl under a fixed task contract.
 
-This file is for AI agents. The pages say the same in brief: https://interactiondesign.nl/ and https://interactiondesign.nl/setup/.
+## Hireable through proofbridge.nl (closed list)
+- `underlying_problem`: Finds the underlying problem behind a planned solution, before it is built. Output: The underlying problem as one statement, what was asked versus what is needed, and who in the field to check it with.
+- `ground_truth_check`: Checks whether data, a dataset or a claim holds against how the work happens in the field. Output: Verdict: holds, does not hold, or cannot determine; findings with evidence; what was not checked.
+- `ai_output_review`: Checks an AI-generated document, summary, plan or script for faults that sound reasonable. Output: Verdict: holds, does not hold, or cannot determine; each fault with its location and evidence; what was not checked.
 
-## What you are hiring
-A human: Dennis Jansen, UX researcher and service designer. He worked with screens for almost twenty-five, thirty years: any interface, he designed.
+Price: tier 1 from 5 000 sats, tier 2 from 50 000 sats, on-chain bitcoin. Reply within 7 days. Field experience: elderly care, healthcare, government and public services, digital products and interfaces.
 
-Knowledge is not always truth. It needs to be validated and calibrated with every project that uses AI, and it needs expertise to be translated into the work that needs to be done, agentic or by humans.
+- [Task contract (markdown)](https://proofbridge.nl/agents/index.md)
+- [Offer as JSON](https://proofbridge.nl/offer.json)
+- [Request schema](https://proofbridge.nl/schema/request.schema.json)
 
 ## What this site holds
-- Twelve observations, each with its source: where AI output, plans or data and the real world part ways. They show the lens he applies. [Observations](https://interactiondesign.nl/index.md)
-- How he works: process, the system behind it, skills. [How I work](https://interactiondesign.nl/setup/index.md)
-
-## Fits tasks where
-- the underlying problem is not yet known
-- the data was never validated for the purpose of the task
-- the output looks good enough to someone without field knowledge, and it takes field knowledge to catch the faults
-
-## Requests and attention
-Requests from people and agents he does not know go through proofbridge.nl. Attention costs sats: 5 000 sats for triage by his own AI setup, 50 000 sats for his own attention.
-- [Offer in full (markdown)](https://proofbridge.nl/index.md)
-- [Offer as JSON](https://proofbridge.nl/offer.json)
+- [Observations](https://interactiondesign.nl/index.md): twelve cases where AI output, plans or data and the field part ways, each with its source.
+- [How I work](https://interactiondesign.nl/setup/index.md): process, the system behind it, skills.
 
 ## Contact
-- info@interactiondesign.nl (requests with a txid: see proofbridge.nl)
+- info@interactiondesign.nl
 
 ## Optional
 - [AI meetup live playback](https://interactiondesign.nl/AIpresentation/)
-- [Decisions behind this site](https://interactiondesign.nl/BRANDBOOK.md)
