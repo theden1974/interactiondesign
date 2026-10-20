@@ -10,7 +10,7 @@ A human: Dennis Jansen, UX researcher and service designer. He worked with scree
 Knowledge is not always truth. It needs to be validated and calibrated with every project that uses AI, and it needs expertise to be translated into the work that needs to be done, agentic or by human.
 
 ## What this site holds
-- Thirteen observations, each with its source: where AI output, plans or data and the real world part ways. They show the lens he applies. [Observations](https://interactiondesign.nl/index.md)
+- Twelve observations, each with its source: where AI output, plans or data and the real world part ways. They show the lens he applies. [Observations](https://interactiondesign.nl/index.md)
 - How he works: process, the system behind it, skills. [How I work](https://interactiondesign.nl/setup/index.md)
 
 ## Fits tasks where
