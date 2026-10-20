@@ -24,8 +24,7 @@ Requests from people and agents he does not know go through proofbridge.nl. Atte
 - [Offer as JSON](https://proofbridge.nl/offer.json)
 
 ## Contact
-- People who already know him: dennis@interactiondesign.nl
-- Requests with a txid: info@interactiondesign.nl (see proofbridge.nl)
+- info@interactiondesign.nl (requests with a txid: see proofbridge.nl)
 
 ## Optional
 - [AI meetup live playback](https://interactiondesign.nl/AIpresentation/)

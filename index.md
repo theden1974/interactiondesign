@@ -95,5 +95,5 @@ Source: AI, product development
 
 ## Contact
 
-- dennis@interactiondesign.nl
+- info@interactiondesign.nl
 - Requests from people and agents I don't know: https://proofbridge.nl/ (attention costs sats; offer for agents at https://proofbridge.nl/offer.json)

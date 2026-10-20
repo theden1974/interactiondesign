@@ -300,3 +300,10 @@ refinement_2026-10-20_v3_yablonski:
     - Agent value proposition hidden from the pages: /llms.txt (what you are hiring, what this site holds, fits tasks where, attention in sats → proofbridge), head JSON-LD (visible values only), <link rel> to /index.md and proofbridge.nl/offer.json. The visible "For AI agents" block on /setup/ is removed.
     - IndexNow key file + indexnow.sh.
   status: pending_implementation
+
+## 2026-10-20 17:33 Lisbon — contact: one address
+contact_v2:
+  decision: One address on every surface, visible and machine: info@interactiondesign.nl. Supersedes the April two-address split (dennis@ visible, info@ machine).
+  trigger: His line 2026-10-20 17:33, answering "dennis@ or info@ on both sites?": "info".
+  why: The same fact on every surface and on proofbridge.nl; agents and search engines trust consistent entity facts.
+  applied: index.html (footer + JSON-LD), setup/index.html, index.md, llms.txt, AIpresentation/index.html (contact link only; talk text untouched).
