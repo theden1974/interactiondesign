@@ -14,7 +14,7 @@ Price: tier 1 from 5 000 sats, tier 2 from 50 000 sats, on-chain bitcoin. Reply 
 - [Request schema](https://proofbridge.nl/schema/request.schema.json)
 
 ## What this site holds
-- [Observations](https://interactiondesign.nl/index.md): twelve cases where AI output, plans or data and the field part ways, each with its source.
+- [Observations](https://interactiondesign.nl/index.md): nineteen cases where AI output, plans or data and the field part ways, each with its source.
 - [How I work](https://interactiondesign.nl/setup/index.md): process, the system behind it, skills.
 
 ## Contact
