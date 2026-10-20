@@ -1,5 +1,5 @@
 # interactiondesign.nl · people and AI agents are welcome to read everything here.
-# The same offer is visible on the page, in /llms.txt and in /index.md.
+# The offer is on https://proofbridge.nl/; /llms.txt summarises it for agents.
 
 # Search, answer engines and agents acting for a person
 User-agent: OAI-SearchBot

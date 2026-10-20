@@ -28,19 +28,19 @@ Source: Government, water authority
 
 ### 4. THEY ALREADY DECIDED THEY NEEDED AN APP.
 
-The funding was to help long-term unemployed people work in the care of the elderly. I asked to interview the elderly still living at home. They were not good at mobiles and apps. They wanted to be self sufficient. My concept: no app for the elderly, only an app for the employee working in the flat. It was not built out.
+The funding was to help long-term unemployed people work in the care of the elderly. I asked to interview the elderly still living at home. They were not good at mobiles and apps. They wanted to be self-sufficient. My concept: no app for the elderly, only an app for the employee working in the flat. It was not built out.
 
 Source: Elderly care, field research
 
 ### 5. HOW DO YOU KNOW IF YOUR AI MODELS ARE BASED ON THE RIGHT DATA?
 
-The task was optimizing app screens for dietitians. It was not so much the dietitian that needed the right app, but making the patient the center. A patient weight over time has so many input points. Doctor, at home, nurse. Morning, afternoon.
+The task was optimising app screens for dietitians. It was not so much the dietitian that needed the right app, but making the patient the centre. A patient's weight over time has so many input points. Doctor, at home, nurse. Morning, afternoon.
 
 Source: Healthcare, field research
 
-### 6. 2.5 FASTER CPU. NORMAL PEOPLE WON'T SEE IT.
+### 6. 2.5X FASTER CPU. NORMAL PEOPLE WON'T SEE IT.
 
-New laptops: 2.5 faster CPU, GPU data speeds, X amount faster than the previous generation. Normal people won't see measurable changes in their use.
+New laptops: 2.5x faster CPU, GPU data speeds, X amount faster than the previous generation. Normal people won't see measurable changes in their use.
 
 Source: Technology, AI
 
@@ -52,13 +52,13 @@ Source: Government · translated from Dutch
 
 ### 8. AI CAN'T TELL TIME FROM A CLOCK WITHOUT NUMBERS.
 
-If eighty percent is trained on one view, the twenty percent that has an alternative view won't be taken with.
+If eighty percent is trained on one view, the twenty percent that has an alternative view won't be taken along.
 
 Source: AI training data
 
 ### 9. AI IS NOW LIKE THE DEVELOPER AND THE MANAGER.
 
-Without the UX researcher, the UX lead and the service designer that know what problem needs to be solved. My guess: AI can manufacture reasonable output for somebody without the field knowledge, who figures it good enough. And the senior with years of experience catches the faults.
+Without the UX researcher, the UX lead and the service designer that know what problem needs to be solved. My guess: AI can manufacture reasonable output for somebody without the field knowledge, who figures it's good enough. And the senior with years of experience catches the faults.
 
 Source: AI, product development
 
@@ -70,7 +70,7 @@ Source: Nutrition, my talk 2026-09-26
 
 ### 11. CUT 30% OF THE WORKFORCE WITH AI?
 
-A manager was asked how he could lessen the workforce with 30% by using AI. It's not about the AI that would make it more efficient. It's the inefficiency of the legacy systems that would be proven first.
+A manager was asked how he could lessen the workforce by 30% by using AI. It's not about the AI that would make it more efficient. It's the inefficiency of the legacy systems that would be proven first.
 
 Source: Retail, summit conversation
 
@@ -83,7 +83,7 @@ Source: Product development
 ## Latest
 
 - 2026-10-20 · proofbridge.nl (https://proofbridge.nl/)
-- 2026-10-20 · New observations (https://interactiondesign.nl#observation)
+- 2026-10-20 · New observations (https://interactiondesign.nl/#observation)
 - 2026-10-20 · How I work (https://interactiondesign.nl/setup/)
 - 2026-07-22 · AI meetup (https://interactiondesign.nl/AIpresentation/)
 
