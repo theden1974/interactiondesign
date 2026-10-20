@@ -243,3 +243,60 @@ modelvault_sync:
 # locked: site_purpose, no_labels, typography, color, one_page_no_scroll, removed_elements, deploy_mechanism, offering_moat, build_environment, hosting, agent_layer, contact
 # open: rotating_quotes, modelvault_sync
 # pending_implementation: (none — all implementations shipped in v4)
+
+---
+
+# REFINEMENTS — REFLECT build session 2026-10-20 (draft, not yet deployed)
+# Append-only. Earlier decisions above are not rewritten. Each refinement names the decision it changes,
+# the reason, and the source. Dennis verifies by use; one line of his reverts any of these.
+
+refinement_2026-10-20_value_proposition:
+  changes: site_purpose (post-live confirmation, not cold acquisition) and no_labels
+  instruction: Dennis, 2026-10-20 — "update my value proposition with a agentic proposal that showcases my system, underlying process, skills"
+  applied:
+    - Homepage stays the observation channel (intro line + slide). No services list, no CTA on the homepage.
+    - A second layer, /setup/ ("How I work · for agents"), now carries the process, the system, the skills and a visible For AI agents block. The April infographic it replaces described the old three-project setup (frozen at sovereign HEAD bb39b75); kept as a record, not served.
+    - Skills are listed on /setup/ only. The homepage still carries no labels.
+  status: pending_implementation (draft in capture-inbox)
+
+refinement_2026-10-20_slide_navigation:
+  changes: one_page_no_scroll (slide_navigation: "no arrows, no dots, no swipe")
+  reason: Research 2026-10-20 (Google structured-data and spam policies) — machine-readable content should match what a person can see. With 13 slides behind one random pick, people could see 1 of 13 while agents read all 13. Arrows and a count (n / 13) make every slide reachable for a person, so both readers get the same archive. Still one viewport, no scroll, random first slide.
+  source: research_notes "Agents hiring human experts" / agent_readable_standards.md (Google sd-policies; spam policies)
+  status: pending_implementation
+
+refinement_2026-10-20_agent_layer:
+  changes: agent_layer ("No @type declaration. Invisible to human reader.")
+  kept: the static, untyped slide blocks in the head (one per slide, now 13), as decided in April.
+  added:
+    - /setup/ carries one typed schema.org block (@context https://schema.org, ProfilePage → Person → makesOffer → Offer/Service). Every value in it is visible on that page.
+    - /llms.txt, /index.md, /setup/index.md — the same offer in markdown, word for word with the visible pages.
+    - /robots.txt (search, user-directed agents and training crawlers allowed) and /sitemap.xml. Training crawlers allowed is a choice for Dennis; one line flips it.
+    - .nojekyll so GitHub Pages serves .md and .txt files raw.
+  reason: Research 2026-10-20 — untyped JSON-LD is not schema.org data for any parser; agent files that differ from visible text look like hidden instructions (the C135 warning: hidden, agent-only text is the attack hallmark). Not added: an A2A agent card or MCP server card — both promise a live endpoint a static site does not have.
+  status: pending_implementation
+
+refinement_2026-10-20_contact:
+  changes: contact
+  applied: dennis@interactiondesign.nl stays on the page for people who already know Dennis. Requests for his time from people or agents he does not know go through proofbridge.nl (paid attention in sats). info@ stays in the slide blocks.
+  status: pending_implementation
+
+refinement_2026-10-20_offering_moat:
+  changes: offering_moat (x402 parked)
+  applied: Still no x402 listing. The new paid-attention gate on proofbridge.nl is not a callable service: it prices attention, the work stays human. Moat test holds — an agent that pays still gets a human, not an API response.
+  status: pending_implementation
+
+refinement_2026-10-20_slides:
+  changes: content (anchor_implementations)
+  applied: six new slides from captures since April — elderly-care app, patient weight data, benchmarks, always-reasonable output, clock, developer-and-manager. Each traced to Dennis's raw words in the build record (TRACE table). The seven April slides are unchanged.
+  status: pending_implementation
+
+refinement_2026-10-20_v3_yablonski:
+  changes: one_page_no_scroll, typography (labels), agent_layer, contact
+  instruction: Dennis 14:30 — "use https://jonyablonski.com/ and follow the UX rules and all relevant guidelines from that website for look & feel, value proposition. Make a hidden value proposition for agents."
+  applied:
+    - Homepage in jonyablonski.com structure: bar (name · How I work · proofbridge), ↳ intro (one sentence + one line), ↳ observation (the slide, ← n/13 →), ↳ latest (dated updates), ↳ connect. Short scroll, ~1.5 viewports — replaces "single viewport, no scroll".
+    - Identity kept: #0f0f0f, Bebas Neue for the observation headline, DM Sans body. Added: IBM Plex Mono for labels (Yablonski's metadata layer).
+    - Agent value proposition hidden from the pages: /llms.txt (what you are hiring, what this site holds, fits tasks where, attention in sats → proofbridge), head JSON-LD (visible values only), <link rel> to /index.md and proofbridge.nl/offer.json. The visible "For AI agents" block on /setup/ is removed.
+    - IndexNow key file + indexnow.sh.
+  status: pending_implementation
