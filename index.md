@@ -1,8 +1,8 @@
 # Dennis Jansen · interactiondesign.nl
 
-> I'm like AI. I always sound reasonable and trustworthy.
+> I find the real problem before you build the wrong solution.
 
-But it is all about the execution of the insights. I saw my own job becoming less relevant, so I was basically searching for my irrelevance to stay relevant.
+I'm like AI. I always sound reasonable and trustworthy. But it is all about the execution of the insights.
 
 This file carries the visible content of https://interactiondesign.nl/ for AI agents.
 
