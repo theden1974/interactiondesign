@@ -1,4 +1,4 @@
-# Dennis Jansen — interactiondesign.nl
+# Dennis Jansen · interactiondesign.nl
 
 > I find the real problem before you build the wrong solution.
 

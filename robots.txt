@@ -1,4 +1,4 @@
-# interactiondesign.nl — people and AI agents are welcome to read everything here.
+# interactiondesign.nl · people and AI agents are welcome to read everything here.
 # The same offer is visible on the page, in /llms.txt and in /index.md.
 
 # Search, answer engines and agents acting for a person
