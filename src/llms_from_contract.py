@@ -3,6 +3,9 @@
 import json, sys, os
 K = json.load(open(sys.argv[1], encoding='utf-8'))
 OUT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import re
+N = len(re.findall(r'"headline": ', open(os.path.join(OUT, 'index.html'), encoding='utf-8').read()))
+COUNT = {12: 'twelve', 19: 'nineteen'}.get(N, str(N))
 fmt = lambda n: f"{n:,}".replace(',', ' ')
 T1, T2 = K['tiers']
 txt = f"""# interactiondesign.nl · Dennis Jansen
@@ -19,7 +22,7 @@ Price: tier 1 from {fmt(T1['minimum_sats'])} sats, tier 2 from {fmt(T2['minimum_
 - [Request schema](https://proofbridge.nl/schema/request.schema.json)
 
 ## What this site holds
-- [Observations](https://interactiondesign.nl/index.md): twelve cases where AI output, plans or data and the field part ways, each with its source.
+- [Observations](https://interactiondesign.nl/index.md): {COUNT} cases where AI output, plans or data and the field part ways, each with its source.
 - [How I work](https://interactiondesign.nl/setup/index.md): process, the system behind it, skills.
 
 ## Contact
