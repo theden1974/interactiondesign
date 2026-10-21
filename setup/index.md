@@ -13,8 +13,8 @@ The stakeholder that asks for a build is top-down. It doesn't happen often that 
 Building on assumption is the mother of all fuckups.
 
 ## What I call truth
-A truth is a pattern that is found again and again in different domains. First a pattern is a candidate. Seeing it come back makes it factual. A model may not touch it or rewrite it.
-An architect experiences it, a family doctor experiences it, I am a UX specialist and I have experienced it. Then it suddenly becomes factual. More factual than something that has only one source.
+A truth is a pattern that is found again and again in different domains. This is a mechanical operation. First a pattern, or knowledge, or a fact, is a candidate. Seeing it come back makes it factual. A model may not touch it or rewrite it.
+An architect experiences it, a family doctor experiences it, I am a UX specialist and I have experienced it. Then it suddenly becomes factual. More factual than it is with only one source.
 
 ## The system behind it
 My setup is outside of the standard models, on my own hardware. It's basically a recording studio of my expertise. Every time I see the same errors occur, I teach the system.

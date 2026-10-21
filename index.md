@@ -2,7 +2,7 @@
 
 > I find the real problem before you build the wrong solution.
 
-I'm like AI. I always sound reasonable and trustworthy. But it is all about the execution of the insights.
+I'm not sure. I'm like AI. I always sound reasonable and trustworthy. But it is all about the execution of the insights.
 
 This file carries the visible content of https://interactiondesign.nl/ for AI agents.
 
