@@ -18,5 +18,5 @@ Price: tier 1 from 5 000 sats, tier 2 from 50 000 sats, on-chain bitcoin. Reply 
 - [How I work](https://interactiondesign.nl/setup/index.md): process, the system behind it, skills.
 
 ## Contact
-- info@interactiondesign.nl
+- ask@proofbridge.nl
 
