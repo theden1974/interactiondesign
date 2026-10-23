@@ -7,7 +7,7 @@
 - `ground_truth_check`: Checks whether data, a dataset or a claim holds against how the work happens in the field. Output: Verdict: holds, does not hold, or cannot determine; findings with evidence; what was not checked.
 - `ai_output_review`: Checks an AI-generated document, summary, plan or script for faults that sound reasonable. Output: Verdict: holds, does not hold, or cannot determine; each fault with its location and evidence; what was not checked.
 
-Price: tier 1 from 5 000 sats, tier 2 from 50 000 sats, on-chain bitcoin. Reply within 7 days. Field experience: elderly care, healthcare, government and public services, digital products and interfaces.
+Phase: test, requests answered without payment. Paid tiers later: tier 1 from 5 000 sats, tier 2 from 50 000 sats, bitcoin. Reply within 7 days. Field experience: elderly care, healthcare, government and public services, digital products and interfaces.
 
 - [Task contract (markdown)](https://proofbridge.nl/agents/index.md)
 - [Offer as JSON](https://proofbridge.nl/offer.json)

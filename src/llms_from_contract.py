@@ -7,7 +7,7 @@ import re
 N = len(re.findall(r'"headline": ', open(os.path.join(OUT, 'index.html'), encoding='utf-8').read()))
 COUNT = {12: 'twelve', 19: 'nineteen'}.get(N, str(N))
 fmt = lambda n: f"{n:,}".replace(',', ' ')
-T1, T2 = K['tiers']
+TT = {t['tier']: t for t in K['tiers']}; T1, T2 = TT[1], TT[2]
 txt = f"""# interactiondesign.nl · Dennis Jansen
 
 > {K['provider']['name']}, {K['provider']['role']}. This site holds his field observations and how he works. Paid requests go through proofbridge.nl under a fixed task contract.
@@ -15,7 +15,7 @@ txt = f"""# interactiondesign.nl · Dennis Jansen
 ## Hireable through proofbridge.nl (closed list)
 """ + "\n".join(f"- `{x['id']}`: {x['does']} Output: {x['output']}" for x in K['task_types']) + f"""
 
-Price: tier 1 from {fmt(T1['minimum_sats'])} sats, tier 2 from {fmt(T2['minimum_sats'])} sats, on-chain bitcoin. Reply within {K['lifecycle']['reply_window_days']} days. Field experience: {', '.join(K['domains_with_field_experience'])}.
+Phase: test, requests answered without payment. Paid tiers later: tier 1 from {fmt(T1['minimum_sats'])} sats, tier 2 from {fmt(T2['minimum_sats'])} sats, bitcoin. Reply within {K['lifecycle']['reply_window_days']} days. Field experience: {', '.join(K['domains_with_field_experience'])}.
 
 - [Task contract (markdown)](https://proofbridge.nl/agents/index.md)
 - [Offer as JSON](https://proofbridge.nl/offer.json)
