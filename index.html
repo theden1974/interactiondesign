@@ -19,7 +19,7 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "dateModified": "2026-10-20",
+  "dateModified": "2026-10-29",
   "mainEntity": {
     "@type": "Person",
     "@id": "https://interactiondesign.nl/#dennis",
@@ -56,15 +56,11 @@
   .meta .label { margin: 0; }
   .nav { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 2rem; padding: 0.35rem 0.9rem; font-family: var(--mono); font-size: var(--s-1); cursor: pointer; }
   .nav:hover { border-color: var(--fg); }
-  .latest ul { list-style: none; }
-  .latest li { display: grid; grid-template-columns: 7.5rem 12rem 1fr; gap: 1rem; padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
-  .latest .date { font-family: var(--mono); font-size: var(--s-1); color: var(--muted); padding-top: 0.2rem; }
-  .latest a { color: var(--fg); } .latest .note { color: var(--body); }
   footer { padding: 2.2rem 0 3.5rem; display: flex; flex-wrap: wrap; gap: 1.6rem; align-items: baseline; }
   footer .label { margin: 0; } footer a { color: var(--fg); }
   footer .agents { flex-basis: 100%; color: var(--muted); } footer .agents a { color: var(--muted); }
   a:focus-visible, button:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
-  @media (max-width: 720px) { .latest li { grid-template-columns: 1fr; gap: 0.2rem; } .bar { flex-direction: column; align-items: flex-start; } }
+  @media (max-width: 720px) { .bar { flex-direction: column; align-items: flex-start; } }
 </style>
 </head>
 <body>
@@ -93,14 +89,6 @@
   </div>
 </section>
 
-<section class="latest" aria-labelledby="h-latest">
-  <span class="label" id="h-latest">↳ latest</span>
-  <ul>
-      <li><span class="date">2026-10-20</span><a href="https://proofbridge.nl/">proofbridge.nl</a></li>
-      <li><span class="date">2026-10-20</span><a href="/#observation">New observations</a></li>
-      <li><span class="date">2026-10-20</span><a href="/setup/">How I work</a></li>
-  </ul>
-</section>
 
 <footer>
   <span class="label">↳ connect</span>

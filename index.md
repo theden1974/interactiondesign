@@ -122,12 +122,6 @@ I noticed the lock-in of the different AI models and see the direction it is hea
 
 Source: My own system. Move: not your keys
 
-## Latest
-
-- 2026-10-20 · proofbridge.nl (https://proofbridge.nl/)
-- 2026-10-20 · New observations (https://interactiondesign.nl/#observation)
-- 2026-10-20 · How I work (https://interactiondesign.nl/setup/)
-
 ## Contact
 
 - info@interactiondesign.nl
