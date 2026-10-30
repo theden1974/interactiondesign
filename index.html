@@ -51,7 +51,7 @@
   .intro h1 { font-weight: 500; font-size: var(--s2); line-height: 1.2; max-width: 23.6ch; color: var(--head); text-wrap: balance; }
   .intro p { color: var(--body); max-width: 61.8ch; margin-top: var(--sp2); }
   .slide { cursor: pointer; }
-  .slide h2 { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: clamp(var(--s2), 1rem + 6.5vw, var(--s4)); line-height: 0.92; overflow-wrap: break-word; hyphens: auto; letter-spacing: 0.01em; color: var(--head); max-width: 16ch; }
+  .slide h2 { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: var(--s3); line-height: 0.92; overflow-wrap: break-word; hyphens: auto; letter-spacing: 0.01em; color: var(--head); max-width: 16ch; }
   .slide p { color: var(--body); max-width: 61.8ch; margin-top: var(--sp2); }
   .meta { display: flex; flex-wrap: wrap; gap: var(--sp2); align-items: center; margin-top: var(--sp3); }
   .meta .label { margin: 0; }
@@ -61,7 +61,8 @@
   footer .label { margin: 0; } footer a { color: var(--fg); }
   footer .agents { flex-basis: 100%; color: var(--muted); } footer .agents a { color: var(--muted); }
   a:focus-visible, button:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
-  @media (max-width: 720px) { .bar { flex-direction: column; align-items: flex-start; } }
+  @media (min-width: 1000px) { .slide h2 { font-size: var(--s4); } }
+  @media (max-width: 720px) { .bar { flex-direction: column; align-items: flex-start; } section { padding: var(--sp3) 0; } .meta { margin-top: var(--sp2); } }
 </style>
 </head>
 <body>
