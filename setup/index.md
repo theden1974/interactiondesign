@@ -1,34 +1,25 @@
-# How I work
+# Your expertise is the asset they cannot print.
 
-My most important asset is knowing what needs to be built. How it gets built doesn't matter. Directing AI on what needs to be built, and knowing what does not get built or what doesn't work: that is my value proposition for the coming time.
-I worked with screens for almost twenty-five, thirty years. Any interface, I designed. I am present where the process, the application or the underlying problem is most present.
+AI always has an answer. Outside your expertise, everything keeps sounding reasonable. That gap is where I work.
 
-## The process
-The stakeholder that asks for a build is top-down. It doesn't happen often that the employee who uses it also has the mandate. There is always a translation between the stakeholder that thinks what is needed and the actual user that can express or audit what is needed.
+## AI doesn't say I don't know.
 
-- Go into the field. Seeing the actual product at work, the problems, the customer interaction.
-- Interview. To separate the must-haves from the nice-to-haves.
-- Translate. The output is audited by the actual stakeholder for whom the problem occurs. I just translate.
+It answers in the same confident tone, right or wrong. You have to bring your doubt yourself. And once experts generate their expertise with AI, AI reuses that output and it loops.
 
-Building on assumption is the mother of all fuckups.
+## Nothing is true until validated.
 
-## What I call truth
-A truth is a pattern that is found again and again in different domains. This is a mechanical operation. First a pattern, or knowledge, or a fact, is a candidate. Seeing it come back makes it factual. A model may not touch it or rewrite it.
-An architect experiences it, a family doctor experiences it, I am a UX specialist and I have experienced it. Then it suddenly becomes factual. More factual than it is with only one source.
+I am a UX researcher. I am present where the process, the application or the underlying problem is most present. For proof I go into the field. The desk, the flat, the dike on a Sunday. What those people know you cannot fetch online.
 
-## The system behind it
-My setup is outside of the standard models, on my own hardware. It's basically a recording studio of my expertise. Every time I see the same errors occur, I teach the system.
+## The decisions have no knowledge.
 
-- Raw first, no summaries.
-- Not your keys to the whole system, not your reasoning and not your knowledge.
-- Never trust, verify. Patterns and repetition as the unit of capture.
+The one who asks for a build is top-down. The one who has to live with it is never asked. So the wrong thing gets built, every box ticked. I find the real problem before you build the wrong solution. The one with the problem checks it, not me.
 
-## Skills
+## Instead of I ask, I do.
 
-- UX research and field research: interviews, observation
-- Service design and interaction design (MA, interaction design)
-- Problem definition: finding the underlying problem before the solution
-- Building my own AI system, to understand what it is capable of
-- Bitcoin: don't trust, verify
+Build it, use it, break it, learn from failure. Every conversation, interview and talk goes into my own system, raw, on my own hardware. A pattern that comes back across fields becomes fact. That is knowledge AI can be checked against. Never trust, verify.
 
-Translated lines are marked on the page. This file carries the visible content of https://interactiondesign.nl/setup/. For AI agents, the task contract is at https://proofbridge.nl/agents/index.md.
+## How do you bring the real world into AI?
+
+That is what I do.
+
+This file carries the visible content of https://interactiondesign.nl/setup/. For AI agents, the task contract is at https://proofbridge.nl/agents/index.md.

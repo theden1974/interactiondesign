@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How I work · Dennis Jansen</title>
-<meta name="description" content="How I work. My most important asset is knowing what needs to be built, and what not. The process, what I call truth, the system behind it, skills.">
+<title>Your expertise is the asset they cannot print. · Dennis Jansen</title>
+<meta name="description" content="AI always has an answer. Outside your expertise, everything keeps sounding reasonable. That gap is where I work.">
 <link rel="canonical" href="https://interactiondesign.nl/setup/">
 <link rel="alternate" type="text/markdown" href="/setup/index.md">
 <link rel="describedby" type="text/markdown" href="/llms.txt">
@@ -16,12 +16,12 @@
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "dateModified": "2026-10-20",
+  "dateModified": "2026-10-30",
   "mainEntity": {
     "@type": "Person",
     "@id": "https://interactiondesign.nl/#dennis",
     "name": "Dennis Jansen",
-    "description": "My most important asset is knowing what needs to be built. How it gets built doesn't matter.",
+    "description": "AI always has an answer. Outside your expertise, everything keeps sounding reasonable. That gap is where I work.",
     "url": "https://interactiondesign.nl/",
     "email": "mailto:info@interactiondesign.nl",
     "sameAs": [
@@ -35,10 +35,8 @@
     ],
     "knowsAbout": [
       "UX research",
-      "Service design",
-      "Interaction design",
       "Field research",
-      "Bitcoin"
+      "Interaction design"
     ]
   }
 }
@@ -46,68 +44,60 @@
 
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root { --bg: #0f0f0f; --fg: #f0ece4; --muted: #888; --line: #2e2e2e; --dim: #aaa; }
-  body { background: var(--bg); color: var(--fg); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 64px; }
+  :root { --bg: #0f0f0f; --fg: #f0ece4; --muted: #888; --line: #2e2e2e; --dim: #aaa;
+    --phi: 1.618; --s0: clamp(1rem, 0.95rem + 0.3vw, 1.15rem); --s1: calc(var(--s0) * 1.618); --s2: calc(var(--s0) * 2.618); --s3: calc(var(--s0) * 4.236);
+    --sp1: 1rem; --sp2: 1.618rem; --sp3: 2.618rem; --sp4: 4.236rem; --sp5: 6.854rem; }
+  html { background: var(--bg); }
+  body { background: var(--bg); color: var(--dim); font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; font-size: var(--s0); line-height: 1.618; }
+  .wrap { max-width: 38.2rem; margin: 0 auto; padding: var(--sp4) max(16px, env(safe-area-inset-left, 0px)) var(--sp5) max(16px, env(safe-area-inset-right, 0px)); }
   a { color: var(--fg); }
-  .back { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
-  h1 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(2.6rem, 7vw, 5rem); line-height: 0.95; margin: 28px 0 18px; }
-  h2 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1; margin: 56px 0 14px; letter-spacing: 0.01em; }
-  p, li { color: var(--dim); font-size: 1rem; }
-  p + p { margin-top: 12px; }
-  .lead { color: var(--fg); font-size: 1.15rem; }
-  .note { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; }
-  ol, ul { margin: 12px 0 0 20px; }
-  li { margin: 6px 0; }
-  strong { color: var(--fg); font-weight: 400; }
-  .label { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 6px; }
-  .hair { height: 1px; background: var(--line); margin: 56px 0 18px; }
+  .back { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); text-decoration: none; display: inline-block; padding: .4rem 0; }
+  h1 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(2.4rem, 1.4rem + 4.2vw, var(--s3)); line-height: 0.95; color: var(--fg); margin: var(--sp3) 0 var(--sp2); text-wrap: balance; }
+  .lead { color: var(--fg); font-size: var(--s1); line-height: 1.3; max-width: 61.8ch; text-wrap: balance; }
+  .beat { margin-top: var(--sp4); }
+  .beat h2 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: var(--s2); line-height: 1; color: var(--fg); letter-spacing: 0.01em; margin: 0 0 var(--sp1); text-wrap: balance; }
+  .beat p { max-width: 61.8ch; }
+  .beat.last h2 { color: var(--fg); }
+  .beat.last p { color: var(--fg); font-size: var(--s1); line-height: 1.3; }
+  .hair { height: 1px; background: var(--line); margin: var(--sp5) 0 var(--sp2); }
   footer p { font-size: 0.8rem; color: var(--muted); }
-  @media (max-width: 640px) { .flow { grid-template-columns: 1fr 1fr; } }
+  a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+  @media (prefers-reduced-motion: no-preference) { .beat { animation: none; } }
 </style>
+
 </head>
 <body>
 <div class="wrap">
 
 <a class="back" href="/">&larr; interactiondesign.nl</a>
 
-<h1>How I work</h1>
-<p class="lead">My most important asset is knowing what needs to be built. How it gets built doesn't matter. Directing AI on what needs to be built, and knowing what does not get built or what doesn't work: that is my value proposition for the coming time. <span class="note">(translated from Dutch)</span></p>
-<p>I worked with screens for almost twenty-five, thirty years. Any interface, I designed. I am present where the process, the application or the underlying problem is most present.</p>
+<h1>Your expertise is the asset they cannot print.</h1>
+<p class="lead">AI always has an answer. Outside your expertise, everything keeps sounding reasonable. That gap is where I work.</p>
 
-<h2>The process</h2>
-<p>The stakeholder that asks for a build is top-down. It doesn't happen often that the employee who uses it also has the mandate. There is always a translation between the stakeholder that thinks what is needed and the actual user that can express or audit what is needed.</p>
-<ol>
-  <li><strong>Go into the field.</strong> Seeing the actual product at work, the problems, the customer interaction.</li>
-  <li><strong>Interview.</strong> To separate the must-haves from the nice-to-haves.</li>
-  <li><strong>Translate.</strong> The output is audited by the actual stakeholder for whom the problem occurs. I just translate.</li>
-</ol>
-<p>Building on assumption is the mother of all fuckups.</p>
-
-<h2>What I call truth</h2>
-<p>A truth is a pattern that is found again and again in different domains. This is a mechanical operation. First a pattern, or knowledge, or a fact, is a candidate. Seeing it come back makes it factual. A model may not touch it or rewrite it. <span class="note">(translated from Dutch)</span></p>
-<p>An architect experiences it, a family doctor experiences it, I am a UX specialist and I have experienced it. Then it suddenly becomes factual. More factual than it is with only one source. <span class="note">(translated from Dutch)</span></p>
-
-<h2>The system behind it</h2>
-<p>My setup is outside of the standard models, on my own hardware. It's basically a recording studio of my expertise. Every time I see the same errors occur, I teach the system.</p>
-<ul>
-  <li>Raw first, no summaries.</li>
-  <li>Not your keys to the whole system, not your reasoning and not your knowledge.</li>
-  <li>Never trust, verify. Patterns and repetition as the unit of capture.</li>
-</ul>
-
-<h2>Skills</h2>
-<ul>
-  <li>UX research and field research: interviews, observation</li>
-  <li>Service design and interaction design (MA, interaction design)</li>
-  <li>Problem definition: finding the underlying problem before the solution</li>
-  <li>Building my own AI system, to understand what it is capable of</li>
-  <li>Bitcoin: don't trust, verify</li>
-</ul>
+<section class="beat">
+  <h2>AI doesn&#x27;t say I don&#x27;t know.</h2>
+  <p>It answers in the same confident tone, right or wrong. You have to bring your doubt yourself. And once experts generate their expertise with AI, AI reuses that output and it loops.</p>
+</section>
+<section class="beat">
+  <h2>Nothing is true until validated.</h2>
+  <p>I am a UX researcher. I am present where the process, the application or the underlying problem is most present. For proof I go into the field. The desk, the flat, the dike on a Sunday. What those people know you cannot fetch online.</p>
+</section>
+<section class="beat">
+  <h2>The decisions have no knowledge.</h2>
+  <p>The one who asks for a build is top-down. The one who has to live with it is never asked. So the wrong thing gets built, every box ticked. I find the real problem before you build the wrong solution. The one with the problem checks it, not me.</p>
+</section>
+<section class="beat">
+  <h2>Instead of I ask, I do.</h2>
+  <p>Build it, use it, break it, learn from failure. Every conversation, interview and talk goes into my own system, raw, on my own hardware. A pattern that comes back across fields becomes fact. That is knowledge AI can be checked against. Never trust, verify.</p>
+</section>
+<section class="beat last">
+  <h2>How do you bring the real world into AI?</h2>
+  <p>That is what I do.</p>
+</section>
 
 <div class="hair"></div>
 <footer>
-  <p>Updated 2026-10-20 &middot; <a href="/">observations</a> &middot; <a href="https://proofbridge.nl/">proofbridge.nl</a> &middot; <a href="mailto:info@interactiondesign.nl">info@interactiondesign.nl</a></p>
+  <p>Updated 2026-10-30 &middot; <a href="/">observations</a> &middot; <a href="https://proofbridge.nl/">proofbridge.nl</a> &middot; <a href="mailto:info@interactiondesign.nl">info@interactiondesign.nl</a></p>
 </footer>
 
 </div>
