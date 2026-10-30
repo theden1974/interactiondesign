@@ -38,25 +38,26 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root { --bg: #0f0f0f; --fg: #f0ece4; --head: #ffffff; --muted: #8a8780; --body: #aaa; --line: #2e2e2e;
-    --s-1: clamp(0.72rem, 0.7rem + 0.15vw, 0.8rem); --s0: clamp(1rem, 0.95rem + 0.25vw, 1.15rem); --s2: clamp(1.5rem, 1.3rem + 0.9vw, 2.1rem);
+    --s0: clamp(1rem, 0.95rem + 0.3vw, 1.15rem); --s-1: calc(var(--s0) / 1.618 * 1.1); --s1: calc(var(--s0) * 1.618); --s2: calc(var(--s0) * 2.618); --s3: calc(var(--s0) * 4.236); --s4: calc(var(--s0) * 6.854);
+    --sp1: 1rem; --sp2: 1.618rem; --sp3: 2.618rem; --sp4: 4.236rem; --sp5: 6.854rem;
     --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace; }
   html { background: var(--bg); color: var(--fg); }
-  body { font-family: "DM Sans", system-ui, sans-serif; font-weight: 300; font-size: var(--s0); line-height: 1.6; }
-  .wrap { max-width: 72rem; margin: 0 auto; padding: 0 clamp(1rem, 5vw, 6rem); }
-  .label { font-family: var(--mono); font-size: var(--s-1); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 1rem; }
-  .bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.4rem 0; }
-  .bar .label { margin: 0; } .bar nav { display: flex; gap: 1.4rem; } .bar a { color: var(--fg); text-decoration: none; }
-  section { padding: clamp(2.5rem, 8vh, 5rem) 0; border-bottom: 1px solid var(--line); }
-  .intro h1 { font-weight: 500; font-size: var(--s2); line-height: 1.25; max-width: 30ch; color: var(--head); }
-  .intro p { color: var(--body); max-width: 46ch; margin-top: 1rem; }
+  body { font-family: "DM Sans", system-ui, sans-serif; font-weight: 300; font-size: var(--s0); line-height: 1.618; }
+  .wrap { max-width: 72rem; margin: 0 auto; padding: 0 max(16px, env(safe-area-inset-left, 0px)) 0 max(16px, env(safe-area-inset-right, 0px)); padding-left: max(16px, env(safe-area-inset-left, 0px), 5vw); padding-right: max(16px, env(safe-area-inset-right, 0px), 5vw); }
+  .label { font-family: var(--mono); font-size: var(--s-1); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: var(--sp1); }
+  .bar { display: flex; justify-content: space-between; align-items: center; gap: var(--sp1); padding: var(--sp2) 0; }
+  .bar .label { margin: 0; } .bar nav { display: flex; gap: var(--sp2); } .bar a { color: var(--fg); text-decoration: none; }
+  section { padding: var(--sp4) 0; border-bottom: 1px solid var(--line); }
+  .intro h1 { font-weight: 500; font-size: var(--s2); line-height: 1.2; max-width: 23.6ch; color: var(--head); text-wrap: balance; }
+  .intro p { color: var(--body); max-width: 61.8ch; margin-top: var(--sp2); }
   .slide { cursor: pointer; }
-  .slide h2 { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: clamp(2.3rem, 8.4vw, 7.5rem); line-height: 0.92; overflow-wrap: break-word; hyphens: auto; letter-spacing: 0.01em; color: var(--head); max-width: 16ch; }
-  .slide p { color: var(--body); max-width: 52ch; margin-top: 1.6rem; }
-  .meta { display: flex; flex-wrap: wrap; gap: 1.4rem; align-items: center; margin-top: 2rem; }
+  .slide h2 { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: clamp(var(--s2), 1rem + 6.5vw, var(--s4)); line-height: 0.92; overflow-wrap: break-word; hyphens: auto; letter-spacing: 0.01em; color: var(--head); max-width: 16ch; }
+  .slide p { color: var(--body); max-width: 61.8ch; margin-top: var(--sp2); }
+  .meta { display: flex; flex-wrap: wrap; gap: var(--sp2); align-items: center; margin-top: var(--sp3); }
   .meta .label { margin: 0; }
   .nav { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 2rem; padding: 0.35rem 0.9rem; font-family: var(--mono); font-size: var(--s-1); cursor: pointer; }
   .nav:hover { border-color: var(--fg); }
-  footer { padding: 2.2rem 0 3.5rem; display: flex; flex-wrap: wrap; gap: 1.6rem; align-items: baseline; }
+  footer { padding: var(--sp3) 0 var(--sp4); display: flex; flex-wrap: wrap; gap: var(--sp2); align-items: baseline; }
   footer .label { margin: 0; } footer a { color: var(--fg); }
   footer .agents { flex-basis: 100%; color: var(--muted); } footer .agents a { color: var(--muted); }
   a:focus-visible, button:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
