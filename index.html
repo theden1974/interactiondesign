@@ -51,10 +51,11 @@
   .intro h1 { font-weight: 500; font-size: var(--s2); line-height: 1.2; max-width: 23.6ch; color: var(--head); text-wrap: balance; }
   .intro p { color: var(--body); max-width: 61.8ch; margin-top: var(--sp2); }
   .slide { cursor: pointer; }
-  .slide h2 { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: var(--s3); line-height: 0.92; overflow-wrap: break-word; hyphens: auto; letter-spacing: 0.01em; color: var(--head); max-width: 16ch; }
+  .slide h2 { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: min(var(--s3), 16vw); line-height: 0.92; overflow-wrap: normal; hyphens: manual; letter-spacing: 0.01em; color: var(--head); max-width: 16ch; }
   .slide p { color: var(--body); max-width: 61.8ch; margin-top: var(--sp2); }
-  .meta { display: flex; flex-wrap: wrap; gap: var(--sp2); align-items: center; margin-top: var(--sp3); }
-  .meta .label { margin: 0; }
+  .meta { display: grid; gap: var(--sp1); margin-top: var(--sp3); }
+  .ctrl { display: flex; gap: var(--sp1); align-items: center; }
+  .meta .label { margin: 0; } .ctrl .label { min-width: 4.5ch; text-align: center; }
   .nav { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 2rem; padding: 0.35rem 0.9rem; font-family: var(--mono); font-size: var(--s-1); cursor: pointer; }
   .nav:hover { border-color: var(--fg); }
   footer { padding: var(--sp3) 0 var(--sp4); display: flex; flex-wrap: wrap; gap: var(--sp2); align-items: baseline; }
@@ -85,9 +86,11 @@
   <p id="sub">An architect lets AI summarise a 60-page legal document, then checks it against the paragraphs it points at. They are off. He is not a lawyer, he was curious, and a flaw this obvious gets caught. A smaller flaw looks good enough. Good enough never stands before court.</p>
   <div class="meta">
     <span class="label" id="source">Source: Legal, architecture</span>
-    <button class="nav" id="prev" aria-label="Previous observation">&larr;</button>
-    <span class="label" id="count">1 / 19</span>
-    <button class="nav" id="next" aria-label="Next observation">&rarr;</button>
+    <div class="ctrl">
+      <button class="nav" id="prev" aria-label="Previous observation">&larr;</button>
+      <span class="label" id="count">1 / 19</span>
+      <button class="nav" id="next" aria-label="Next observation">&rarr;</button>
+    </div>
   </div>
 </section>
 
