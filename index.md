@@ -48,7 +48,7 @@ Source: Technology, AI. Move: validated for its purpose
 
 Something goes wrong and AI says how nice that this was recognised, this was exactly the intention. It answers every question and never questions the question. It never says a mistake was made, or that the information is not complete. The question is not whether AI can generate something. Can it create value for the question asked?
 
-Source: Government · translated from Dutch. Move: only an expert can audit it
+Source: Government. Move: only an expert can audit it
 
 ### 8. AI CAN'T TELL TIME FROM A CLOCK WITHOUT NUMBERS.
 
