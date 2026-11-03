@@ -10,7 +10,7 @@
 <link rel="describedby" type="text/markdown" href="/llms.txt">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;500&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -44,36 +44,55 @@
 
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root { --bg: #0f0f0f; --fg: #f0ece4; --muted: #888; --line: #2e2e2e; --dim: #aaa;
-    --phi: 1.618; --s0: clamp(1rem, 0.95rem + 0.3vw, 1.15rem); --s1: calc(var(--s0) * 1.618); --s2: calc(var(--s0) * 2.618); --s3: calc(var(--s0) * 4.236);
-    --sp1: 1rem; --sp2: 1.618rem; --sp3: 2.618rem; --sp4: 4.236rem; --sp5: 6.854rem; }
-  html { background: var(--bg); }
-  body { background: var(--bg); color: var(--dim); font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; font-size: var(--s0); line-height: 1.618; }
-  .wrap { max-width: 38.2rem; margin: 0 auto; padding: var(--sp4) max(16px, env(safe-area-inset-left, 0px)) var(--sp5) max(16px, env(safe-area-inset-right, 0px)); }
-  a { color: var(--fg); }
-  .back { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); text-decoration: none; display: inline-block; padding: .4rem 0; }
-  h1 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(2.4rem, 1.4rem + 4.2vw, var(--s3)); line-height: 0.95; color: var(--fg); margin: var(--sp3) 0 var(--sp2); text-wrap: balance; }
-  .lead { color: var(--fg); font-size: var(--s1); line-height: 1.3; max-width: 61.8ch; text-wrap: balance; }
-  .beat { margin-top: var(--sp4); }
-  .beat h2 { font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: var(--s2); line-height: 1; color: var(--fg); letter-spacing: 0.01em; margin: 0 0 var(--sp1); text-wrap: balance; }
-  .beat p { max-width: 61.8ch; }
-  .beat.last h2 { color: var(--fg); }
+  :root { --bg: #0f0f0f; --fg: #f0ece4; --head: #ffffff; --muted: #8a8780; --body: #aaa; --line: #2e2e2e;
+    --s0: clamp(1rem, 0.95rem + 0.3vw, 1.15rem); --s-1: calc(var(--s0) / 1.618 * 1.1); --s1: calc(var(--s0) * 1.618); --s2: calc(var(--s0) * 2.618); --s3: calc(var(--s0) * 4.236); --s4: calc(var(--s0) * 6.854);
+    --sp1: 1rem; --sp2: 1.618rem; --sp3: 2.618rem; --sp4: 4.236rem; --sp5: 6.854rem;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace; }
+  html { background: var(--bg); color: var(--fg); }
+  body { font-family: "DM Sans", system-ui, sans-serif; font-weight: 300; font-size: var(--s0); line-height: 1.618; }
+  .wrap { max-width: 72rem; margin: 0 auto; padding: 0 max(16px, env(safe-area-inset-left, 0px)) 0 max(16px, env(safe-area-inset-right, 0px)); padding-left: max(16px, env(safe-area-inset-left, 0px), 5vw); padding-right: max(16px, env(safe-area-inset-right, 0px), 5vw); }
+  .label { font-family: var(--mono); font-size: var(--s-1); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: var(--sp1); }
+  .bar { display: flex; justify-content: space-between; align-items: center; gap: var(--sp1); padding: var(--sp2) 0; }
+  .bar .label { margin: 0; } .bar nav { display: flex; gap: var(--sp2); } .bar a { color: var(--fg); text-decoration: none; }
+  section { padding: var(--sp4) 0; border-bottom: 1px solid var(--line); }
+  .intro h1 { font-weight: 500; font-size: var(--s2); line-height: 1.2; max-width: 23.6ch; color: var(--head); text-wrap: balance; }
+  .intro p { color: var(--body); max-width: 61.8ch; margin-top: var(--sp2); }
+  .slide { cursor: pointer; }
+  .slide h2 { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: min(var(--s3), 16vw); line-height: 0.92; overflow-wrap: normal; hyphens: manual; letter-spacing: 0.01em; color: var(--head); max-width: 16ch; }
+  .slide p { color: var(--body); max-width: 61.8ch; margin-top: var(--sp2); }
+  .meta { display: grid; gap: var(--sp1); margin-top: var(--sp3); }
+  .ctrl { display: flex; gap: var(--sp1); align-items: center; }
+  .meta .label { margin: 0; } .ctrl .label { min-width: 4.5ch; text-align: center; }
+  .nav { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 2rem; padding: 0.35rem 0.9rem; font-family: var(--mono); font-size: var(--s-1); cursor: pointer; }
+  .nav:hover { border-color: var(--fg); }
+  footer { padding: var(--sp3) 0 var(--sp4); display: flex; flex-wrap: wrap; gap: var(--sp2); align-items: baseline; }
+  footer .label { margin: 0; } footer a { color: var(--fg); }
+  footer .agents { flex-basis: 100%; color: var(--muted); } footer .agents a { color: var(--muted); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+  @media (min-width: 1000px) { .slide h2 { font-size: var(--s4); } }
+  @media (max-width: 720px) { .bar { flex-direction: column; align-items: flex-start; } section { padding: var(--sp3) 0; } .meta { margin-top: var(--sp2); } }
+  .title h1 { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: min(var(--s3), 16vw); line-height: 0.92; letter-spacing: 0.01em; color: var(--head); max-width: 16ch; overflow-wrap: normal; hyphens: manual; }
+  .title p { color: var(--fg); font-size: var(--s1); line-height: 1.3; max-width: 38.2ch; margin-top: var(--sp2); text-wrap: balance; }
+  .beat h2 { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: min(var(--s2), 12vw); line-height: 0.95; letter-spacing: 0.01em; color: var(--head); max-width: 16ch; overflow-wrap: normal; hyphens: manual; }
+  .beat p { color: var(--body); max-width: 61.8ch; margin-top: var(--sp1); }
   .beat.last p { color: var(--fg); font-size: var(--s1); line-height: 1.3; }
-  .hair { height: 1px; background: var(--line); margin: var(--sp5) 0 var(--sp2); }
-  footer p { font-size: 0.8rem; color: var(--muted); }
-  a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
-  @media (prefers-reduced-motion: no-preference) { .beat { animation: none; } }
+  footer .upd { flex-basis: 100%; color: var(--muted); }
+  @media (min-width: 1000px) { .title h1 { font-size: var(--s4); } .beat h2 { font-size: var(--s3); } }
 </style>
 
 </head>
 <body>
 <div class="wrap">
 
-<a class="back" href="/">&larr; interactiondesign.nl</a>
+<header class="bar">
+  <a class="label" href="/">Dennis Jansen</a>
+  <nav class="label" aria-label="Site"><a href="/">Observations</a><a href="https://proofbridge.nl/">proofbridge ↗</a></nav>
+</header>
 
-<h1>Your expertise is the asset they cannot print.</h1>
-<p class="lead">AI always has an answer. Outside your expertise, everything keeps sounding reasonable. That gap is where I work.</p>
-
+<section class="title" aria-labelledby="h1">
+  <h1 id="h1">Your expertise is the asset they cannot print.</h1>
+  <p>AI always has an answer. Outside your expertise, everything keeps sounding reasonable. That gap is where I work.</p>
+</section>
 <section class="beat">
   <h2>AI doesn&#x27;t say I don&#x27;t know.</h2>
   <p>It answers in the same confident tone, right or wrong. You have to bring your doubt yourself. And once experts generate their expertise with AI, AI reuses that output and it loops.</p>
@@ -95,9 +114,13 @@
   <p>That is what I do.</p>
 </section>
 
-<div class="hair"></div>
 <footer>
-  <p>Updated 2026-10-30 &middot; <a href="/">observations</a> &middot; <a href="https://proofbridge.nl/">proofbridge.nl</a> &middot; <a href="mailto:info@interactiondesign.nl">info@interactiondesign.nl</a></p>
+  <span class="label">↳ connect</span>
+  <a href="mailto:info@interactiondesign.nl">info@interactiondesign.nl</a>
+  <a href="https://proofbridge.nl/">proofbridge.nl</a>
+  <a href="https://x.com/theden1974">X</a>
+  <a href="https://github.com/theden1974">GitHub</a>
+  <p class="upd label">Updated 2026-10-30</p>
 </footer>
 
 </div>
