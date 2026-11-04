@@ -2,8 +2,6 @@
 
 > I find the real problem before you build the wrong solution.
 
-Start with curiosity and ask a lot of questions. Find the core purpose, what the project is there for. Then ask what value you can bring, in any shape or form. Only then does the real problem show, the actual pain, the hurt. That is where I start and that is what I relieve.
-
 This file carries the visible content of https://interactiondesign.nl/ for AI agents.
 
 ## Observations
@@ -121,6 +119,14 @@ Source: Government, a conversation. Move: what was underneath
 Every AI model wants you locked in, and the old system and the new AI environment are not that different. So my setup runs on my own hardware, own keys. Raw first, the story in its purest form, with all its nuances. Never trust, verify, not the system and not my own judgement either. Value has to stand on itself.
 
 Source: My own system. Move: not your keys
+
+## The road
+
+Start with curiosity and “question everything”. Find the core purpose for what is asked. Then understand what value is brought.
+
+### The audit by me
+
+Bring what you have. I read it and reply by email: https://proofbridge.nl/ask/ or info@interactiondesign.nl
 
 ## Contact
 
