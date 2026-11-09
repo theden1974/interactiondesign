@@ -122,11 +122,11 @@ Source: My own system. Move: not your keys
 
 ## The road
 
-Start with curiosity and “question everything”. Find the core purpose for what is asked. Then understand what value is brought.
+Start with curiosity and "question everything". Find the core purpose for what is asked. Then understand what value is brought. Anyone can now put a question or a piece of work through that lens, in their own AI.
 
-### The audit by me
+### The audit by my lens
 
-Bring what you have. I read it and reply by email: https://proofbridge.nl/ask/ or info@interactiondesign.nl
+A sparring partner, the start of a good UX conversation. Version 0.1, improved by use. Connect it and say: use the UX lens. https://proofbridge.nl/mcp/
 
 ## Contact
 
