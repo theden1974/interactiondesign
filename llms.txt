@@ -1,22 +1,16 @@
 # interactiondesign.nl · Dennis Jansen
 
-> Dennis Jansen, UX researcher and service designer. This site holds his field observations and how he works. Paid requests go through proofbridge.nl under a fixed task contract.
+> Dennis Jansen, UX researcher and service designer. This site holds his field observations and how he works. His UX lens is at proofbridge.nl: a text a person loads into their own AI chat as a connector.
 
-## Hireable through proofbridge.nl (closed list)
-- `underlying_problem`: Finds the underlying problem behind a planned solution, before it is built. Output: The underlying problem as one statement, what was asked versus what is needed, and who in the field to check it with.
-- `ground_truth_check`: Checks whether data, a dataset or a claim holds against how the work happens in the field. Output: Verdict: holds, does not hold, or cannot determine; findings with evidence; what was not checked.
-- `ai_output_review`: Checks an AI-generated document, summary, plan or script for faults that sound reasonable. Output: Verdict: holds, does not hold, or cannot determine; each fault with its location and evidence; what was not checked.
-
-Phase: test, requests answered without payment. Paid tiers later: tier 1 from 5 000 sats, tier 2 from 50 000 sats, bitcoin. Reply within 7 days. Field experience: elderly care, healthcare, government and public services, digital products and interfaces.
-
-- [Task contract (markdown)](https://proofbridge.nl/agents/index.md)
-- [Offer as JSON](https://proofbridge.nl/offer.json)
-- [Request schema](https://proofbridge.nl/schema/request.schema.json)
+## proofbridge.nl
+- For agents: nothing open since 2026-11-24. The review by mail ended on that date.
+- Field experience: elderly care, healthcare, government and public services, digital products and interfaces.
+- [What is here, for agents (markdown)](https://proofbridge.nl/agents/index.md)
+- [The same as JSON](https://proofbridge.nl/offer.json)
 
 ## What this site holds
 - [Observations](https://interactiondesign.nl/index.md): nineteen cases where AI output, plans or data and the field part ways, each with its source.
 - [How I work](https://interactiondesign.nl/setup/index.md): why, the gap, how I work, the door to the UX lens.
 
 ## Contact
-- ask@proofbridge.nl
-
+- info@interactiondesign.nl

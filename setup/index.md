@@ -32,4 +32,4 @@ A business plan, a framework, a website, a startup plan: put it through the UX l
 
 [Connect the lens](https://proofbridge.nl/mcp/)
 
-This file carries the visible content of https://interactiondesign.nl/setup/. For AI agents, the task contract is at https://proofbridge.nl/agents/index.md.
+This file carries the visible content of https://interactiondesign.nl/setup/. For AI agents, what is here is described at https://proofbridge.nl/agents/index.md.

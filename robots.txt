@@ -1,5 +1,5 @@
 # interactiondesign.nl · people and AI agents are welcome to read everything here.
-# The offer is on https://proofbridge.nl/agents/; /llms.txt summarises it for agents.
+# What is here for agents is described on https://proofbridge.nl/agents/; /llms.txt summarises this site.
 
 User-agent: *
 Allow: /
