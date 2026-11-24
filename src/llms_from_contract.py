@@ -23,7 +23,7 @@ Phase: test, requests answered without payment. Paid tiers later: tier 1 from {f
 
 ## What this site holds
 - [Observations](https://interactiondesign.nl/index.md): {COUNT} cases where AI output, plans or data and the field part ways, each with its source.
-- [How I work](https://interactiondesign.nl/setup/index.md): process, the system behind it, skills.
+- [How I work](https://interactiondesign.nl/setup/index.md): why, the gap, how I work, the door to the UX lens.
 
 ## Contact
 - {K['request']['to']}
